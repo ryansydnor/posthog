@@ -8,6 +8,7 @@ from posthog.models.utils import RootTeamMixin
 class ScheduledChange(RootTeamMixin, models.Model):
     class AllowedModels(models.TextChoices):
         FEATURE_FLAG = "FeatureFlag", "feature flag"
+        SURVEY = "Survey", "survey"
 
     id = models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")
     record_id = models.CharField(max_length=200)
