@@ -9,9 +9,9 @@ from django.utils import timezone
 from celery import current_task
 
 from posthog.exceptions_capture import capture_exception
-from posthog.models import FeatureFlag, ScheduledChange
+from posthog.models import FeatureFlag, ScheduledChange, Survey
 
-models = {"FeatureFlag": FeatureFlag}
+models = {"FeatureFlag": FeatureFlag, "Survey": Survey}
 
 # Maximum number of retry attempts before marking as permanently failed
 MAX_RETRY_ATTEMPTS = 5
